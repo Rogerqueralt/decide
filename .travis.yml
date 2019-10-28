@@ -16,6 +16,8 @@ install:
   - pip install -r requirements.txt
   - pip install codacy-coverage
   - pip install flake8
+notifications:
+  email: false  
 script:
   - cd decide
   - coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
